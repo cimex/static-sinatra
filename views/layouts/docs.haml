@@ -1,0 +1,16 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+	%head
+		%meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+		%title
+			DOCS
+		%link{:href => "#{rel_path}stylesheets/docs.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+		%link{:href => "#{rel_path}images/favicon.ico", :rel => "shortcut icon"}/
+		/[if IE 7]
+			%link{:href => "#{rel_path}stylesheets/ie/7.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+		/[if IE 6]
+			%link{:href => "#{rel_path}stylesheets/ie/6.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+	%body.docs
+		#page
+			= yield
+		%script{:src => "#{rel_path}javascripts/application.js", :type => "text/javascript"}

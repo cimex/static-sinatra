@@ -1,0 +1,35 @@
+/**********************************
+
+Use: Internet Explorer 6 Windows
+Author: standards@cimex.com
+
+***********************************/
+
+.overview .bottom-left-pink {
+    bottom: -2px;
+}
+
+.overview .bottom-right-pink {
+    bottom: -2px;
+}
+
+/* nav */
+
+#nav li a{line-height:0.85em;}
+#nav ul.nested{width:948px;}
+
+
+/* corners */
+.nav-two-levels .nested-three .bottom-left-white,
+.nav-two-levels .nested-three .bottom-right-white {
+    bottom: -10px !important;
+}
+
+.nav-two-levels .nested-three .bottom-right-white {
+    right: -1px !important;
+}
+
+.nav-two-levels .nested-two .bottom-left-white,
+.nav-two-levels .nested-two .bottom-right-white {
+    bottom: -16px !important;
+}

@@ -1,0 +1,64 @@
+.nav-two-levels
+
+  :ruby
+    if theme_url == "early-years/"
+      navigation = navigation_early_years
+    elsif theme_url == "safeguarding/"
+      navigation = navigation_safeguarding
+    elsif theme_url == "child-poverty/"
+      navigation = navigation_child_poverty
+    end
+
+    if is_tertiary
+      prefix = "../../../"
+    elsif url_match?("checklist")
+      prefix = "../"
+    else prefix = "../../"
+    end
+
+
+  %ul{:class => has_checklist? ? "has-checklist" : ""}
+    -navigation.each_index do |primary_idx|
+
+      -primary_hash  = navigation[primary_idx]
+
+      -# if there isn't a rewrite defined (to prevent long paths) just convert the title to a path
+      -primary_token = primary_hash[:rewrite] || convert_to_url_token(primary_hash[:title])
+      -first_token_of_secondary_nav = primary_hash[:children][0][:rewrite] || convert_to_url_token(primary_hash[:children][0][:title])
+
+
+
+      %li{:class => num_array[primary_idx]}
+        %a{:href => prefix + primary_token + "/" + first_token_of_secondary_nav + "/index.html", :class => url_match?(primary_token) ? "selected" : ""}
+          %span{:class => nav_padding_class(navigation, primary_hash[:title]) ? "double" : "" }
+            =primary_hash[:title]
+          %span.border
+
+        -if url_match?(primary_token)
+          
+          %ul.nested{:class => primary_hash[:children].size == 3 ? "nested-three" : "nested-two"}
+            -primary_hash[:children].each_with_index do |secondary_hash, secondary_idx|
+
+              -secondary_token = secondary_hash[:rewrite] || convert_to_url_token(secondary_hash[:title])
+
+              -first_token_of_tertiary_nav = ""
+
+              -if secondary_hash[:children].class == Array
+                -first_token_of_tertiary_nav = first_token(secondary_hash[:children][0])
+
+                -tertiary_nav = secondary_hash[:children]
+
+              %li{:rel => first_token_of_tertiary_nav, :id => "sub#{secondary_idx + 1}"}
+                %a{:class => url_match?(secondary_token) ? "selected" : "",
+                   :href => prefix+primary_token+"/"+secondary_token+first_token_of_tertiary_nav+"/index.html" }
+                  %span
+                    =secondary_hash[:title]
+                  %span.border
+                    
+        -if has_checklist? && is_last?(primary_idx, navigation)
+          %li.last
+            %a{:href => prefix+"checklist/index.html", :class => url_match?("checklist") ? "selected" : ""}
+              Checklist
+
+        -if url_match?("checklist")
+          .fill

@@ -1,0 +1,1 @@
+start "saving static html files to static directory" /wait cmd /C "rake build"

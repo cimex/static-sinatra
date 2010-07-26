@@ -1,0 +1,181 @@
+#jplayer_container {
+	margin-top: 20px;
+	background: url(../../../images/audio-player/base.jpg) 0 0 no-repeat;
+	float: left;
+	position: relative;
+	background-color:#eee;
+	width:300px;
+	height:60px;
+}
+
+#home-page #three-cols #jplayer_container p,
+#jplayer_container p {
+	margin:0;
+	padding:0;
+	padding-right:0;
+	color: #fff;
+	position: absolute;
+	top: 2px;
+	left: 13px;
+}
+
+#jplayer_container  ul#jplayer_controls {
+	list-style-type:none;
+	padding:0;
+	margin: 0;
+}
+#jplayer_container  ul#jplayer_controls li {
+	overflow:hidden;
+	text-indent:-9999px;
+}
+#jplayer_play,
+#jplayer_pause {
+	display: block;
+	position: absolute;
+	left:13px;
+	top:26px;
+	width:31px;
+	height:23px;
+	cursor: pointer;
+}
+#jplayer_play {
+	background: url(../../../images/audio-player/playOn.gif) 0 0 no-repeat;
+}
+#jplayer_play.different_prefix_example_hover {
+	background: url(../../../images/audio-player/playOff.gif) 0 0 no-repeat;
+}
+#jplayer_pause {
+	background: url(../../../images/audio-player/pauseOn.gif) 0 0 no-repeat;
+}
+#jplayer_pause.different_prefix_example_hover {
+	background: url(../../../images/audio-player/pauseOff.gif) 0 0 no-repeat;
+}
+#jplayer_stop {
+	position: absolute;
+	left:49px;
+	top:26px;
+	background: url(../../../images/audio-player/stopOn.gif) 0 0 no-repeat;
+	width:31px;
+	height:23px;
+	cursor: pointer;
+}
+#jplayer_stop.different_prefix_example_hover {
+	background: url(../../../images/audio-player/stopOff.gif) 0 0 no-repeat;
+}
+.jp-progress {
+	position: absolute;
+	left:86px;
+	top:30px;
+	background-color: #4b4c4e;
+	width:80px;
+	height:9px;
+	border: 1px solid #fff;
+}
+#jplayer_play_bar {
+	background: url(../../../images/audio-player/bar_load.gif)  top left repeat-x;
+	width:0px;
+	height:9px;
+	cursor: pointer;
+}
+#jplayer_load_bar {
+}
+
+#jplayer_play_bar.different_prefix_example_buffer {
+	background: url(../../../images/audio-player/bar_buffer.gif)  top left repeat-x;
+}
+#jplayer_play_bar {
+	background: url(../../../images/audio-player/bar_play.gif) top left repeat-x ;
+	width:0px;
+	height:9px;
+}
+#jplayer_volume_min {
+	position: absolute;
+	left:257px;
+	top:25px;
+	background: url(../../../images/audio-player/muteOn.gif) 0 0 no-repeat;
+	width:31px;
+	height:23px;
+	cursor: pointer;
+}
+
+#jplayer_volume_max {
+	display: none;
+	position: absolute;
+	left:278px;
+	top:32px;
+	background: url(../../../images/audio-player/spirites.jpg) 0 -186px no-repeat;
+	width:18px;
+	height:15px;
+	cursor: pointer;
+}
+/*
+#jplayer_controls .off{display:none;}
+*/
+#jplayer_volume_min.different_prefix_example_hover {
+	background: url(../../../images/audio-player/muteOff.gif) 0 0 no-repeat;
+}
+
+#jplayer_volume_max.different_prefix_example_hover {
+	background: url(../../../images/audio-player/spirites.jpg) -19px -186px no-repeat;
+}
+
+#jplayer_volume_bar {
+	display: none;
+	position: absolute;
+	left:231px;
+	top:37px;
+	background: url(../../../images/audio-player/volume_bar.gif) repeat-x top left;
+	width:46px;
+	height:5px;
+	cursor: pointer;
+}
+#jplayer_volume_bar_value {
+	background: url(../../../images/audio-player/volume_bar_value.gif) repeat-x top left;
+	width:0px;
+	height:5px;
+}
+
+#jplayer_playlist_message {
+	position: absolute;
+	left: 183px;
+	top: 23px;
+	width: 71px;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:1.4em;
+	height:1em;
+	font-size: 13px;
+	color: #fff;
+}
+
+#song_title {
+	float:left;
+	margin:0 5px 0 0;
+	padding:0;
+	font-weight:bold;
+}
+
+#play_time,
+#total_time {
+	padding-top:.3em;
+	font-weight:normal;
+}
+
+#play_time {
+	float:left;
+}
+
+#total_time {
+	float:right;
+	text-align: right;
+}
+
+.miaow {
+	font-size:.8em;
+	color:#999;
+}
+
+.miaow a:link, a:visited, a:hover, a:focus, a:active {
+	color:#009be3;
+}
+

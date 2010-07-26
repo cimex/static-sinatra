@@ -1,0 +1,24 @@
+:ruby
+  if url_match?("early-years/")
+    navigation = navigation_early_years
+  elsif url_match?("safeguarding/")
+    navigation = navigation_safeguarding
+  elsif url_match?("child-poverty/")
+    navigation = navigation_child_poverty
+  end
+
+-navigation.each_index do |primary_idx|
+
+  -primary_hash  = navigation[primary_idx]
+  -primary_token = primary_hash[:rewrite] || convert_to_url_token(primary_hash[:title])
+  -if url_match?(primary_token)
+    -primary_hash[:children].each_with_index do |secondary_hash, secondary_idx|
+    -if secondary_hash[:children].class == Array
+      -tertiary_nav = secondary_hash[:children]
+        %ul#sub-nav{:class => tertiary_nav.size == 6 ? "six-items" : ""}
+          -#=tertiary_nav[1].inspect
+          -tertiary_nav.each_with_index do |tertiary_hash, idx|
+            -tertiary_token = tertiary_hash[:rewrite] || convert_to_url_token(tertiary_hash[:title])
+            %li{:class => "li#{(idx+1).to_s}"}
+              %a{:href => "../"+tertiary_token+"/index.html", :class => url_match?(tertiary_token) ? "selected" : ""}
+                =tertiary_hash[:title]

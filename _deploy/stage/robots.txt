@@ -1,0 +1,6 @@
+# robots.tx file for Cimex non-live sites
+# 
+# Last edited Ben Priestman, Cimex Media Ltd, 9th Feb 2009
+
+User-agent: *
+Disallow: /

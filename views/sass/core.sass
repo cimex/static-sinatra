@@ -1,0 +1,356 @@
+/***********************************
+ *
+ * Use: Core CSS styling
+ * Author: standards@cimex.com
+ *
+ ***********************************
+/*
+
+@import reset
+
+body
+  color: black
+  background: #fff
+  font: 12px arial, helvetica, sans-serif
+  line-height: 1.8em
+
+p, blockquote
+  margin: 10px 0 0 0
+  padding: 0
+
+a
+  outline: none
+
+h1, h2, h3, h4
+  margin: 20px 0 0 0
+  padding: 0
+
+h1
+  font-size: 2.8em
+  line-height: 1.2em
+
+h2
+  margin: 20px 0 0 0
+  padding: 0 0 10px 0
+  font-size: 1.4em
+  line-height: 1em
+
+h3
+  font-size: 1.2em
+
+img
+  &.video, &.diagram
+    margin: 20px 0 0 0
+
+/*tools
+
+$orange: #ED7B00
+$dark_orange: #ED7B00
+$green: #005E66
+$pink: #ea177a
+$purple: #5a29a4
+
+.purple
+  color: #fff
+  background: #c62a7b
+
+.dark-purple
+  color: #fff
+  background: #5c165f
+
+.orange
+  color: #fff
+  background: #f26a1e
+
+.ax
+  position: absolute
+  left: -9999px
+
+.left
+  float: left
+
+.right
+  float: right
+  display: inline
+
+.cl
+  clear: both
+
+
+/*layout
+
+#page
+  margin: 0 auto
+  width: 984px
+
+#wrapper
+  padding: 0 20px
+
+/* header
+
+#header
+  margin: 28px 0 0 0
+  float: left
+  display: inline
+  width: 100%
+  position: relative
+
+
+/* nav
+
+.nav-two-levels
+  clear: both
+  position: relative
+  z-index: 1
+  width: 100%
+  float: left
+  display: inline
+  ul
+    margin: 0
+    padding: 0
+  li
+    margin: 0
+    padding: 0
+    list-style-type: none
+    float: left
+    display: inline
+    a
+      float: left
+      display: inline
+      margin: 0
+      padding: 14px 10px
+      height: 22px
+      font-weight: bold
+      line-height: 1.2em
+      text-decoration: none
+      text-align: center
+      color: white
+      padding: 20px 10px
+      span.one-row
+        padding-top: 10px
+      span.double
+        margin-top: -6px
+      span
+        display: block
+
+    &.single
+      a
+        padding: 20px 10px
+        height: 10px
+      .selected
+        padding: 17px 10px
+        height: 16px
+
+#page .nav-two-levels ul li ul.nested-two li a
+  font-size: 1.6em
+
+#page .nav-two-levels ul li ul.nested li a span  
+  display: inline
+  color: #fff !important
+
+.nav-two-levels ul li a.selected, .nav-two-levels ul li ul li a
+  color: #fff !important
+  background: #009cde
+
+/* default
+
+.nav-two-levels li a
+  background: image-url("nav/nav-grey-grad-white-top.gif") repeat-x 0 0
+  position: relative
+  &:hover
+    background: image-url("nav/nav-grey-white-top.gif") repeat-x 0 0
+  .top-left-white, .top-right-white
+    top: 7px
+  &.selected
+    .top-left-white, .top-right-white
+      top: 0px
+
+#page .nav-two-levels ul.nested li a
+  background: #009cde
+  position: relative
+  &:hover
+    background: #0080b5
+  span.border
+    height: 42px
+    width: 1px
+    position: absolute
+    background: #0080b5
+    top: 0px
+    right: 0px
+    padding: 0
+
+
+span.border
+  height: 42px
+  width: 1px
+  position: absolute
+  background: #c5c5c5
+  top: 8px
+  right: 0px
+  padding: 0
+
+a.selected, a.last
+  span.border
+    display: none
+
+.nav-two-levels li ul li#sub3 a span.border
+  display: none !important
+
+
+
+
+
+
+
+
+
+
+
+#page
+  ul.nested, div.fill
+    clear: both
+    position: absolute
+    z-index: 2
+    top: 50px
+    left: 0
+    height: 42px
+    width: 944px
+  .fill
+    width: 940px
+    background: image-url("nav/nav_fill.gif") no-repeat
+  ul
+    &.nested li a
+      margin: 0
+      padding: 10px 0 0 0
+      height: 32px
+      font-weight: bold
+      font-size: 1.1em
+      line-height: 1.2em
+      text-decoration: none
+      text-align: center
+      color: #666666
+      width: 470px
+      span
+        color: #fff
+      &.selected span
+        padding: 0 0 0 13px
+        color: #fff
+        background: image-url("white-dot.png") no-repeat 0 7px
+
+    &.nested-three
+      #sub1 a
+        width: 313px
+      #sub2 a
+        width: 314px
+      #sub3 a
+        width: 313px
+      li a.selected span
+        background: image-url("white-dot.png") no-repeat 0 3px
+
+/* body wrapper
+
+#body-wrapper
+  margin: 42px 0 0 0
+  padding: 0
+  clear: both
+  position: relative
+  float: left
+  display: inline
+  width: 100%
+
+
+
+#sub-nav
+  margin: 0
+  padding: 0
+  float: left
+  display: inline
+  width: 100%
+  li
+    margin: 0
+    padding: 0
+    list-style-type: none
+    float: left
+    display: inline
+    a
+      padding: 23px 18px 13px 8px
+      width: 129px
+      height: 124px
+      font-size: 1.12em
+      font-weight: bold
+      line-height: 1.2em
+      color: #666
+      background: #e4eeef
+      text-decoration: none
+      float: left
+      display: inline
+      &:hover
+        background-color: #C5DDDF
+        background-position: -465px 0
+        text-decoration: none
+      &.selected
+        background-position: 0 0
+        &:hover
+          background-position: 0 0
+        background-color: $green
+
+#page .six-items li a
+  width: 77px
+
+#page .six-items li
+  position: relative
+  a
+    .top-right-white, .top-left-white
+      top: 10px
+
+#page .six-items li.li4 a
+  width: 78px
+
+#page #sub-nav li a.selected
+  color: white
+  .top-right-white, .top-left-white
+    top: 0
+
+#sub-nav li.li4 a
+  width: 128px
+
+
+#footer
+  clear: both
+  margin: 40px 0 0 0
+  width: 100%
+  min-height: 145px
+  background: #ccc
+  float: left
+  display: inline
+  .inner
+    margin: 0 auto
+    width: 608px
+  ul
+    margin: 0
+    padding: 30px 0 50px 0
+    li
+      float: left
+      display: inline
+      padding: 0 25px 0 0
+      &#scie
+        padding: 0
+      a
+        display: block
+        height: 66px
+
+
+
+.nav-two-levels
+  .top-left-white, .top-right-white, .bottom-right-white, .bottom-left-white
+    width: 6px
+    height: 6px
+  .top-left-white
+    background: image-url("corners/white/small-topLeft.png") 0 0 no-repeat
+  .top-right-white
+    background: image-url("corners/white/small-topRight.png") 0 0 no-repeat
+  .bottom-right-white
+    background: image-url("corners/white/small-bottomRight.png") 0 0 no-repeat
+  .bottom-left-white
+    background: image-url("corners/white/small-bottomLeft.png") 0 0 no-repeat
+
