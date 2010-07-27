@@ -20,16 +20,16 @@ Author: standards@cimex.com
 
 
 /* corners */
-.nav-two-levels .nested-three .bottom-left-white,
-.nav-two-levels .nested-three .bottom-right-white {
+#nav .nested-three .bottom-left-white,
+#nav .nested-three .bottom-right-white {
     bottom: -10px !important;
 }
 
-.nav-two-levels .nested-three .bottom-right-white {
+#nav .nested-three .bottom-right-white {
     right: -1px !important;
 }
 
-.nav-two-levels .nested-two .bottom-left-white,
-.nav-two-levels .nested-two .bottom-right-white {
+#nav .nested-two .bottom-left-white,
+#nav .nested-two .bottom-right-white {
     bottom: -16px !important;
 }

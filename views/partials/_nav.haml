@@ -1,4 +1,4 @@
-.nav-two-levels
+#nav
 
   :ruby
     if theme_token == "fish"
@@ -7,9 +7,11 @@
       navigation = navigation_reptiles
     end
 
-    if is_tertiary
+    if is_home
+      prefix = ""
+    elsif is_tertiary
       prefix = "../../../"
-    else prefix = ""
+    else prefix = "../../"
     end
 
   %ul
@@ -20,7 +22,6 @@
       -# if there isn't a rewrite defined (to prevent long paths) just convert the title to a path
       -primary_token = primary_hash[:rewrite] || convert_to_url_token(primary_hash[:title])
       -first_token_of_secondary_nav = primary_hash[:children][0][:rewrite] || convert_to_url_token(primary_hash[:children][0][:title])
-
 
 
       %li{:class => num_array[primary_idx]}
@@ -45,4 +46,4 @@
                 %a{:class => url_match?(secondary_token) ? "selected" : "",
                    :href => prefix+primary_token+"/"+secondary_token+first_token_of_tertiary_nav+"/index.html" }
                   %span
-                    &ndash; #{secondary_hash[:title]}
+                    #{secondary_hash[:title]}

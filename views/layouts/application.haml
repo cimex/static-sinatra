@@ -25,7 +25,7 @@
             %a.hidden-link{:href => rel_path+theme_token+"/index.html"}
               =theme_token.capitalize
         #body-wrapper
-          = partial :'partials/nav', :locals => {:theme_token => theme_token, :is_tertiary => defined?(is_tertiary) ? true : false}
+          = partial :'partials/nav', :locals => { :theme_token => theme_token, :is_tertiary => defined?(is_tertiary) ? true : false, :is_home => defined?(is_home) ? true : false, :is_sec => defined?(is_sec) ? true : false }
           = yield
           .cl
     = partial :'partials/footer'

@@ -167,8 +167,8 @@ $(document).ready(function () {
         var js_rel_path = $('li#home a').attr('href').match(/(\.\.\/)*/)[0].replace(/^\.\.\//,'');
 
         //navigation hack - awkward border removal
-        $('div.nav-two-levels ul li a.selected:first').parent().prev().find('span.border').remove();
-        $('div.nav-two-levels ul > li.four a span.border').remove();
+        $('div#nav ul li a.selected:first').parent().prev().find('span.border').remove();
+        $('div#nav ul > li.four a span.border').remove();
 
 
         // for use in roundedCornersInit
@@ -192,12 +192,12 @@ $(document).ready(function () {
                 ".block-image-only",
                 ".block-bubble"
             ];
-            var round_top_selectors = [".block-head, ul.six-items li a, .nav-two-levels > ul > li > a.selected"];
+            var round_top_selectors = [".block-head, ul.six-items li a, #nav > ul > li > a.selected"];
             var round_bottom_selectors = [".block-reflection-points .block-inner, .tab-content"];
-            var round_top_left_selectors = [".nav-two-levels > ul > li:first a:first"];
-            var round_top_right_selectors = [".nav-two-levels ul:first > li:last > a:last"];
-            var round_bottom_left_selectors = [".nav-two-levels ul.nested li:first a"];
-            var round_bottom_right_selectors = [".nav-two-levels ul.nested li:last a"];
+            var round_top_left_selectors = ["#nav > ul > li:first a:first"];
+            var round_top_right_selectors = ["#nav ul:first > li:last > a:last"];
+            var round_bottom_left_selectors = ["#nav ul.nested li:first a"];
+            var round_bottom_right_selectors = ["#nav ul.nested li:last a"];
 
             $.each(round_all_selectors, function(i,string){ roundedCorners(string,"all"); });
             $.each(round_top_selectors, function(i,string){ roundedCorners(string,"top"); });

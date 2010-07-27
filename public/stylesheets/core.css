@@ -50,7 +50,8 @@ p, blockquote {
   padding: 0; }
 
 a {
-  outline: none; }
+  outline: none;
+  color: black; }
 
 h1, h2, h3, h4 {
   margin: 20px 0 0 0;
@@ -71,6 +72,9 @@ h3 {
 
 img.video, img.diagram {
   margin: 20px 0 0 0; }
+
+ul {
+  padding: 20px 0; }
 
 .hidden-link {
   color: black !important;
@@ -109,7 +113,7 @@ img.video, img.diagram {
   position: relative; }
 
 /* nav */
-.nav-two-levels {
+#nav {
   clear: both;
   position: relative;
   z-index: 1;
@@ -117,16 +121,16 @@ img.video, img.diagram {
   float: left;
   display: inline;
   height: 99px; }
-  .nav-two-levels ul {
+  #nav ul {
     margin: 0;
     padding: 0; }
-  .nav-two-levels li {
+  #nav li {
     margin: 0;
     padding: 0;
     list-style-type: none;
     float: left;
     display: inline; }
-    .nav-two-levels li a {
+    #nav li a {
       float: left;
       display: inline;
       margin: 0;
@@ -136,36 +140,24 @@ img.video, img.diagram {
       line-height: 1.2em;
       text-decoration: none;
       text-align: center;
-      color: white;
       padding: 20px 10px; }
-      .nav-two-levels li a:hover {
+      #nav li a:hover, #nav li a.selected {
         text-decoration: underline; }
-      .nav-two-levels li a span.one-row {
-        padding-top: 10px; }
-      .nav-two-levels li a span.double {
-        margin-top: -6px; }
-      .nav-two-levels li a span {
+      #nav li a span {
         display: block; }
-    .nav-two-levels li.single a {
-      padding: 20px 10px;
-      height: 10px; }
-    .nav-two-levels li.single .selected {
-      padding: 17px 10px;
-      height: 16px; }
-    .nav-two-levels li.one a {
+    #nav li.one a {
       padding-left: 0; }
 
-#page .nav-two-levels ul li ul.nested li a span {
+#page #nav ul li ul.nested li a span {
   display: inline; }
 
 /* default */
-.nav-two-levels li a {
-  position: relative;
-  color: black; }
-
-#page .nav-two-levels ul.nested li a {
+#nav li a {
   position: relative; }
-  #page .nav-two-levels ul.nested li a span.border {
+
+#page #nav ul.nested li a {
+  position: relative; }
+  #page #nav ul.nested li a span.border {
     height: 42px;
     width: 1px;
     position: absolute;
@@ -180,8 +172,7 @@ img.video, img.diagram {
   top: 50px;
   left: 0; }
 #page .fill {
-  width: 940px;
-  background: url('../images/nav/nav_fill.gif') no-repeat; }
+  width: 940px; }
 #page ul.nested li a {
   margin: 0;
   padding: 10px 10px 0 0;
@@ -190,8 +181,6 @@ img.video, img.diagram {
   text-align: center; }
   #page ul.nested li a.selected span {
     text-decoration: underline; }
-#page ul.nested-three li a.selected span {
-  background: url('../images/white-dot.png') no-repeat 0 3px; }
 
 /* body wrapper */
 #body-wrapper {
@@ -216,44 +205,13 @@ img.video, img.diagram {
     float: left;
     display: inline; }
     #sub-nav li a {
-      padding: 23px 18px 13px 8px;
-      width: 129px;
-      height: 124px;
-      font-size: 1.12em;
+      padding: 0 20px 20px 0;
       font-weight: bold;
-      line-height: 1.2em;
-      color: #666666;
-      background: #e4eeef;
       text-decoration: none;
       float: left;
       display: inline; }
-      #sub-nav li a:hover {
-        background-color: #c5dddf;
-        background-position: -465px 0;
-        text-decoration: none; }
       #sub-nav li a.selected {
-        background-position: 0 0; }
-        #sub-nav li a.selected:hover {
-          background-position: 0 0; }
-
-#page .six-items li a {
-  width: 77px; }
-
-#page .six-items li {
-  position: relative; }
-  #page .six-items li a .top-right-white, #page .six-items li a .top-left-white {
-    top: 10px; }
-
-#page .six-items li.li4 a {
-  width: 78x; }
-
-#page #sub-nav li a.selected {
-  color: white; }
-  #page #sub-nav li a.selected .top-right-white, #page #sub-nav li a.selected .top-left-white {
-    top: 0; }
-
-#sub-nav li.li4 a {
-  width: 128px; }
+        text-decoration: underline; }
 
 #footer {
   clear: both;
@@ -265,15 +223,3 @@ img.video, img.diagram {
   #footer .inner {
     margin: 0 auto;
     width: 940px; }
-  #footer ul {
-    margin: 0;
-    padding: 30px 0 50px 0; }
-    #footer ul li {
-      float: left;
-      display: inline;
-      padding: 0 25px 0 0; }
-      #footer ul li#scie {
-        padding: 0; }
-      #footer ul li a {
-        display: block;
-        height: 66px; }

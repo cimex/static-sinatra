@@ -20,7 +20,8 @@ p, blockquote
 
 a
   outline: none
-
+  color: #000
+  
 h1, h2, h3, h4
   margin: 20px 0 0 0
   padding: 0
@@ -42,8 +43,11 @@ img
   &.video, &.diagram
     margin: 20px 0 0 0
 
-.hidden-link
-  color: black !important
+ul
+  padding: 20px 0
+
+a.hidden-link
+  color: black
   text-decoration: none
   &:hover
     text-decoration: underline
@@ -72,7 +76,14 @@ img
 #wrapper
   padding: 0 20px
 
-/* header
+#body-wrapper
+  margin: 0
+  padding: 0
+  clear: both
+  position: relative
+  float: left
+  display: inline
+  width: 100%
 
 #header
   margin: 28px 0 0 0
@@ -81,10 +92,20 @@ img
   width: 100%
   position: relative
 
+#footer
+  clear: both
+  margin: 40px 0 0 0
+  width: 100%
+  min-height: 145px
+  float: left
+  display: inline
+  .inner
+    margin: 0 auto
+    width: 940px
 
 /* nav
 
-.nav-two-levels
+#nav
   clear: both
   position: relative
   z-index: 1
@@ -111,40 +132,24 @@ img
       line-height: 1.2em
       text-decoration: none
       text-align: center
-      color: white
       padding: 20px 10px
-      &:hover
+      &:hover, &.selected
         text-decoration: underline
-      span.one-row
-        padding-top: 10px
-      span.double
-        margin-top: -6px
       span
         display: block
-
-    &.single
-      a
-        padding: 20px 10px
-        height: 10px
-      .selected
-        padding: 17px 10px
-        height: 16px
 
     &.one a
       padding-left: 0
 
-#page .nav-two-levels ul li ul.nested li a span
+#page #nav ul li ul.nested li a span
   display: inline
-
 
 /* default
 
-.nav-two-levels li a
+#nav li a
   position: relative
-  color: #000
 
-
-#page .nav-two-levels ul.nested li a
+#page #nav ul.nested li a
   position: relative
   span.border
     height: 42px
@@ -153,7 +158,6 @@ img
     top: 0px
     right: 0px
     padding: 0
-
 
 #page
   ul.nested, div.fill
@@ -164,7 +168,6 @@ img
     left: 0
   .fill
     width: 940px
-    background: image-url("nav/nav_fill.gif") no-repeat
   ul
     &.nested li a
       margin: 0
@@ -174,21 +177,6 @@ img
       text-align: center
       &.selected span
         text-decoration: underline
-
-    &.nested-three
-      li a.selected span
-        background: image-url("white-dot.png") no-repeat 0 3px
-
-/* body wrapper
-
-#body-wrapper
-  margin: 0
-  padding: 0
-  clear: both
-  position: relative
-  float: left
-  display: inline
-  width: 100%
 
 #sub-nav
   margin: 0
@@ -203,68 +191,10 @@ img
     float: left
     display: inline
     a
-      padding: 23px 18px 13px 8px
-      width: 129px
-      height: 124px
-      font-size: 1.12em
+      padding: 0 20px 20px 0
       font-weight: bold
-      line-height: 1.2em
-      color: #666
-      background: #e4eeef
       text-decoration: none
       float: left
       display: inline
-      &:hover
-        background-color: #C5DDDF
-        background-position: -465px 0
-        text-decoration: none
       &.selected
-        background-position: 0 0
-        &:hover
-          background-position: 0 0
-
-
-#page .six-items li a
-  width: 77px
-
-#page .six-items li
-  position: relative
-  a
-    .top-right-white, .top-left-white
-      top: 10px
-
-#page .six-items li.li4 a
-  width: 78x
-
-#page #sub-nav li a.selected
-  color: white
-  .top-right-white, .top-left-white
-    top: 0
-
-#sub-nav li.li4 a
-  width: 128px
-
-
-
-#footer
-  clear: both
-  margin: 40px 0 0 0
-  width: 100%
-  min-height: 145px
-  float: left
-  display: inline
-  .inner
-    margin: 0 auto
-    width: 940px
-  ul
-    margin: 0
-    padding: 30px 0 50px 0
-    li
-      float: left
-      display: inline
-      padding: 0 25px 0 0
-      &#scie
-        padding: 0
-      a
-        display: block
-        height: 66px
+        text-decoration: underline

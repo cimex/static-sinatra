@@ -26,6 +26,7 @@ set :root, File.dirname(__FILE__)
 APP_ROOT = File.dirname(__FILE__)
 set :views, "views"
 set :public, "public"
+set :port, 1234
 
 # compass (Sass toolkit) config
 configure do
@@ -59,31 +60,20 @@ get "/README.html" do
   }
 end
 
-get "/tutorials/:name.html" do
-  haml :"pages/tutorials/#{params[:name]}"
-end
-
 get "/:theme/index.html" do
   haml :"pages/#{params[:theme]}/index", {
     :layout => :"layouts/application", :locals => {
       :theme_token => params[:theme],
-      :theme_url => params[:theme]+"/"
+      :theme_url => params[:theme]+"/",
+      :is_home => true
     }
   }
 end
 
-get "/:theme/:name.html" do
-  haml :"pages/#{params[:theme]}/#{params[:name]}", {
-    :layout => :"layouts/lightbox", :locals => {
-      :theme_token => params[:theme],
-      :theme_url => params[:theme]+"/"
-    }
-  }
-end
 
 # TERTIARY PAGES
-get "/:theme/:audience/:seg1/:seg2/:seg3/index.html" do
-  haml :"pages/#{params[:theme]}/#{params[:audience]}/#{params[:seg1]}/#{params[:seg2]}/#{params[:seg3]}/index", {
+get "/:theme/:audience/:seg1/:seg2/index.html" do
+  haml :"pages/#{params[:theme]}/#{params[:audience]}/#{params[:seg1]}/#{params[:seg2]}/index", {
     :layout => :"layouts/application", :locals => {
       :audience_name => params[:audience],
       :theme_token => params[:theme],
@@ -91,6 +81,7 @@ get "/:theme/:audience/:seg1/:seg2/:seg3/index.html" do
       :is_tertiary => true
     }
   }
+
 end
 
 
