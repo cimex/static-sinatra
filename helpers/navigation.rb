@@ -12,25 +12,25 @@ module Sinatra::Navigation
   def navigation_reptiles
     navigation_reptiles = [
       {
-        :title => "",
+        :title => "Classification",
         :children => [
-          {:title => ""},
-          {:title => ""}
+          {:title => "History of classification", :rewrite => "history"},
+          {:title => "Taxonomy"}
         ]
       },
       {
-        :title => "",
-        :rewrite => "",
+        :title => "Systems",
+        :rewrite => "sys",
         :children => [
-          {:title => ""},
-          {:title => "",
+          {:title => "Circulatory"},
+          {:title => "Respiratory",
            :children => [
-             {:title => "", :rewrite => ""},
-             {:title => "", :rewrite => ""},
-             {:title => "", :rewrite => ""}
+             {:title => "Reptilian lungs", :rewrite => "lungs"},
+             {:title => "Turtles and tortoises"},
+             {:title => "Palate"}
            ]
           },
-          {:title => ""}
+          {:title => "Evolutionary history"}
         ]
       }
     ]
@@ -39,26 +39,25 @@ module Sinatra::Navigation
   def navigation_fish
     navigation_fish = [
       {
-        :title => "",
+        :title => "Importance to humans",
         :children => [
-          {:title => ""},
-          {:title => ""}
+          {:title => "Economic importance"},
+          {:title => "Recreation"}
         ]
       },
       {
-        :title => "",
-        :rewrite => "",
+        :title => "Anatomy",
+        :rewrite => "anatomy-of-fish",
         :children => [
-          {:title => ""},
-          {:title => "",
+          {:title => "Respiration"},
+          {:title => "Sensory and nervous system", :rewrite => "sns",
            :children => [
-             {:title => "", :rewrite => ""},
-             {:title => ""},
-             {:title => ""},
-             {:title => ""}
+             {:title => "Central nervous system", :rewrite => "cns"},
+             {:title => "Sense organs"},
+             {:title => "Capacity for pain", :rewrite => "pain"}
            ]
           },
-          {:title => ""}
+          {:title => "Scales"}
         ]
       }
     ]
