@@ -3,12 +3,9 @@
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
     %title
-      =audience_name_title(audience_name)
-      |
-      =theme_token.capitalize.gsub('-',' ')
+      =theme_token
       | projectName
     %link{:href => rel_path+"stylesheets/core.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => rel_path+"images/favicon.ico", :rel => "shortcut icon"}/
     /[if IE 7]
       %link{:href => rel_path+"stylesheets/ie/7.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
     /[if IE 6]
@@ -16,13 +13,19 @@
     %script{:src => rel_path+"javascripts/application.js", :type => "text/javascript"}
 
 
-  %body{:id => defined?(home_page) ? "home-page" : audience_name, :class => theme_token}
+  %body
 
     #page
       #wrapper
         #header
-
+          %h1
+            %a.hidden-link{:href => rel_path+"index.html"}
+              static-sinatra demo
+          %h2
+            %a.hidden-link{:href => rel_path+theme_token+"/index.html"}
+              =theme_token.capitalize
         #body-wrapper
+          = partial :'partials/nav', :locals => {:theme_token => theme_token, :is_tertiary => defined?(is_tertiary) ? true : false}
           = yield
           .cl
     = partial :'partials/footer'

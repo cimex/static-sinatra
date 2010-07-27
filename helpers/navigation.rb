@@ -1,14 +1,5 @@
 module Sinatra::Navigation
 
-  def has_checklist?
-    if request.fullpath.include? "characteristics"
-      return true
-    elsif request.fullpath.include? "bad habits"
-      return true
-    else return false
-    end
-  end
-
   def navigation_reptiles
     navigation_reptiles = [
       {

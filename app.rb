@@ -11,8 +11,8 @@ helpers Sinatra::Utilities
 # application specific helpers
 require 'helpers/navigation'
 helpers Sinatra::Navigation
-require 'helpers/application'
-helpers Sinatra::Application
+require 'helpers/custom'
+helpers Sinatra::Custom
 
 # ensure that every rack request creates a new css file
 require 'sass/plugin/rack'
@@ -42,13 +42,15 @@ end
 
 # routes
 
-get '/stylesheets/:name.css' do
+get '/stylesheets/:name' do
   content_type 'text/css', :charset => 'utf-8'
   sass(:"sass/#{params[:name]}", Compass.sass_engine_options )
 end
 
 get "/index.html" do
-  haml :"pages/index"
+  haml :"pages/index", {
+    :layout => :"layouts/docs"
+  }
 end
 
 get "/README.html" do
@@ -63,7 +65,7 @@ end
 
 get "/:theme/index.html" do
   haml :"pages/#{params[:theme]}/index", {
-    :layout => :"layouts/home", :locals => {
+    :layout => :"layouts/application", :locals => {
       :theme_token => params[:theme],
       :theme_url => params[:theme]+"/"
     }

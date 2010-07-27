@@ -42,25 +42,11 @@ img
   &.video, &.diagram
     margin: 20px 0 0 0
 
-/*tools
-
-$orange: #ED7B00
-$dark_orange: #ED7B00
-$green: #005E66
-$pink: #ea177a
-$purple: #5a29a4
-
-.purple
-  color: #fff
-  background: #c62a7b
-
-.dark-purple
-  color: #fff
-  background: #5c165f
-
-.orange
-  color: #fff
-  background: #f26a1e
+.hidden-link
+  color: black !important
+  text-decoration: none
+  &:hover
+    text-decoration: underline
 
 .ax
   position: absolute
@@ -105,6 +91,7 @@ $purple: #5a29a4
   width: 100%
   float: left
   display: inline
+  height: 99px
   ul
     margin: 0
     padding: 0
@@ -126,6 +113,8 @@ $purple: #5a29a4
       text-align: center
       color: white
       padding: 20px 10px
+      &:hover
+        text-decoration: underline
       span.one-row
         padding-top: 10px
       span.double
@@ -141,69 +130,29 @@ $purple: #5a29a4
         padding: 17px 10px
         height: 16px
 
-#page .nav-two-levels ul li ul.nested-two li a
-  font-size: 1.6em
+    &.one a
+      padding-left: 0
 
-#page .nav-two-levels ul li ul.nested li a span  
+#page .nav-two-levels ul li ul.nested li a span
   display: inline
-  color: #fff !important
 
-.nav-two-levels ul li a.selected, .nav-two-levels ul li ul li a
-  color: #fff !important
-  background: #009cde
 
 /* default
 
 .nav-two-levels li a
-  background: image-url("nav/nav-grey-grad-white-top.gif") repeat-x 0 0
   position: relative
-  &:hover
-    background: image-url("nav/nav-grey-white-top.gif") repeat-x 0 0
-  .top-left-white, .top-right-white
-    top: 7px
-  &.selected
-    .top-left-white, .top-right-white
-      top: 0px
+  color: #000
+
 
 #page .nav-two-levels ul.nested li a
-  background: #009cde
   position: relative
-  &:hover
-    background: #0080b5
   span.border
     height: 42px
     width: 1px
     position: absolute
-    background: #0080b5
     top: 0px
     right: 0px
     padding: 0
-
-
-span.border
-  height: 42px
-  width: 1px
-  position: absolute
-  background: #c5c5c5
-  top: 8px
-  right: 0px
-  padding: 0
-
-a.selected, a.last
-  span.border
-    display: none
-
-.nav-two-levels li ul li#sub3 a span.border
-  display: none !important
-
-
-
-
-
-
-
-
-
 
 
 #page
@@ -213,52 +162,33 @@ a.selected, a.last
     z-index: 2
     top: 50px
     left: 0
-    height: 42px
-    width: 944px
   .fill
     width: 940px
     background: image-url("nav/nav_fill.gif") no-repeat
   ul
     &.nested li a
       margin: 0
-      padding: 10px 0 0 0
-      height: 32px
+      padding: 10px 10px 0 0
       font-weight: bold
-      font-size: 1.1em
-      line-height: 1.2em
       text-decoration: none
       text-align: center
-      color: #666666
-      width: 470px
-      span
-        color: #fff
       &.selected span
-        padding: 0 0 0 13px
-        color: #fff
-        background: image-url("white-dot.png") no-repeat 0 7px
+        text-decoration: underline
 
     &.nested-three
-      #sub1 a
-        width: 313px
-      #sub2 a
-        width: 314px
-      #sub3 a
-        width: 313px
       li a.selected span
         background: image-url("white-dot.png") no-repeat 0 3px
 
 /* body wrapper
 
 #body-wrapper
-  margin: 42px 0 0 0
+  margin: 0
   padding: 0
   clear: both
   position: relative
   float: left
   display: inline
   width: 100%
-
-
 
 #sub-nav
   margin: 0
@@ -292,7 +222,7 @@ a.selected, a.last
         background-position: 0 0
         &:hover
           background-position: 0 0
-        background-color: $green
+
 
 #page .six-items li a
   width: 77px
@@ -304,7 +234,7 @@ a.selected, a.last
       top: 10px
 
 #page .six-items li.li4 a
-  width: 78px
+  width: 78x
 
 #page #sub-nav li a.selected
   color: white
@@ -315,17 +245,17 @@ a.selected, a.last
   width: 128px
 
 
+
 #footer
   clear: both
   margin: 40px 0 0 0
   width: 100%
   min-height: 145px
-  background: #ccc
   float: left
   display: inline
   .inner
     margin: 0 auto
-    width: 608px
+    width: 940px
   ul
     margin: 0
     padding: 30px 0 50px 0
@@ -338,19 +268,3 @@ a.selected, a.last
       a
         display: block
         height: 66px
-
-
-
-.nav-two-levels
-  .top-left-white, .top-right-white, .bottom-right-white, .bottom-left-white
-    width: 6px
-    height: 6px
-  .top-left-white
-    background: image-url("corners/white/small-topLeft.png") 0 0 no-repeat
-  .top-right-white
-    background: image-url("corners/white/small-topRight.png") 0 0 no-repeat
-  .bottom-right-white
-    background: image-url("corners/white/small-bottomRight.png") 0 0 no-repeat
-  .bottom-left-white
-    background: image-url("corners/white/small-bottomLeft.png") 0 0 no-repeat
-
