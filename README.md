@@ -1,7 +1,13 @@
 <h1>static-sinatra</h1>
-<p>A <a href="http://www.sinatrarb.com/">Sinatra</a> application with Rakefile designed for multiple static <span class="caps">HTML</span> sites</p>
+<p>A <a href="http://www.sinatrarb.com/">Sinatra</a> application with RakeFile designed for multiple static <span class="caps">HTML</span> sites</p>
 <p>This project came about after a client requested multiple versions of a static site. It was agreed that these sites should use the same front-end assets and the content should be able to be entered into
 files using the textile markup language. The source reflects this structure and includes a working navigation for 2 side by side dummy sites</p>
+<h2>Quick start</h2>
+<ul>
+<li>Download the source</li>
+<li>copy the downloaded dir cimex-static-sinatra-xxxxx to wherever you normally develop projects</li>
+<li>in the terminal, cd to that dir and <code>ruby app.rb</code></li>
+</ul>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
 <li><a href="#developing-and-editing">Developing and editing</a>
