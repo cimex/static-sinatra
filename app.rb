@@ -26,7 +26,6 @@ set :root, File.dirname(__FILE__)
 APP_ROOT = File.dirname(__FILE__)
 set :views, "views"
 set :public, "public"
-set :port, 1234
 
 # compass (Sass toolkit) config
 configure do
