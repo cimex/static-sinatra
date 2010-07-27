@@ -79,12 +79,6 @@ Sass files inside <code>views/sass/core.sass</code> and these will appear at <a 
 <h2 id="coding-conventions">Coding Conventions</h2>
 <h3 id="indentation">Indentation</h3>
 <p>Two spaces are used for indentation (no tab characters)</p>
-<h3 id="javascript">JavaScript</h3>
-<p>function names: <code>camelCase</code><br />
-variable names: <code>words_seperated_by_underscores</code></p>
-<h3 id="css"><span class="caps">CSS</span>/Sass</h3>
-<p>class names: <code>words-seperated-by-hyphens</code><br />
-class for JS use only: use the <code>-js</code> suffix e.g. <code>slide-trigger-js</code></p>
 <h2 id="technology">About the technology</h2>
 <p>Built using the ruby "micro-framework" <a href="http://sinatrarb.com/intro">Sinatra</a></p>
 <h3 id="why-not-html">Why not code the whole lot in <span class="caps">HTML</span>?</h3>
