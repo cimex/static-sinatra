@@ -7,6 +7,7 @@ files using the textile markup language. The source reflects this structure and 
 <li>Download the source</li>
 <li>copy the downloaded dir cimex-static-sinatra-xxxxx to wherever you normally develop projects</li>
 <li>in the terminal, cd to that dir and <code>ruby app.rb</code></li>
+<li>in your browser, got to http://localhost:4567/ and you should see the intro page</li>
 </ul>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
