@@ -21,7 +21,6 @@ files using the textile markup language. The source reflects this structure and 
 <li><a href="#building-the-html-templates">Building the <span class="caps">HTML</span> templates</a></li>
 <li><a href="#exporting">Exporting a stand alone version</a></li>
 <li><a href="#modifying-the-css">Modifying the <span class="caps">CSS</span></a></li>
-<li><a href="#svn-details"><span class="caps">SVN</span> details</a></li>
 <li><a href="#coding-conventions">Coding conventions</a></li>
 <li><a href="#technology">About the technology</a></li>
 <li><a href="#limitations">Limitations</a></li>
