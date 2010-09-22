@@ -83,6 +83,7 @@ the root</p>
 <p>There is now a very simple test suite that uses Rspec, in the test directory</p>
 <p>Add whatever strings you want to search for in the <code>stringsToSearchFor</code> array inside <code>test/suite.rb</code>, and run <code>rake run_tests</code> from that directory</p>
 <p>A report will then be generated that you can open manually in your browser (<code>results.html</code>)</p>
+<p><strong>As you may realise, the static content has not been built yet in this repo, so you will need to cd to the root and run <code>rake build</code> before the tests will have anything to test.</p>
 
 <h2 id="template-version">Template version</h2>
 
