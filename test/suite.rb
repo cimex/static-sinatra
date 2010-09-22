@@ -5,7 +5,7 @@ require 'spec/autorun'
 describe "searching static files for error strings" do
 
   pageError = false
-  stringsToSearchFor = ["error","sinatra"]
+  stringsToSearchFor = ["error","ditty"]
   static_html_paths = Dir.glob('../static/**/*.html')
 
   static_html_paths.each do |file|
