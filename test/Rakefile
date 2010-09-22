@@ -1,0 +1,9 @@
+require 'rake'
+require 'spec/rake/spectask'
+
+desc "Generate HTML report for failing examples"
+Spec::Rake::SpecTask.new('run_tests') do |t|
+  t.spec_files = FileList['suite.rb']
+  t.spec_opts = ["--require", "./custom_report_formatter.rb", "--format", "Spec::Runner::Formatter::CustomHtmlFormatter:results.html", "--diff", "context"]
+  t.fail_on_error = false
+end
