@@ -19,11 +19,12 @@ files using the textile markup language. The source reflects this structure and 
 <li><a href="#template-version">Template version</a></li>
 <li><a href="#running-the-application">Running the application</a></li>
 <li><a href="#building-the-html-templates">Building the <span class="caps">HTML</span> templates</a></li>
+<li><a href="#testing">Testing</a></li>
 <li><a href="#exporting">Exporting a stand alone version</a></li>
 <li><a href="#modifying-the-css">Modifying the <span class="caps">CSS</span></a></li>
 <li><a href="#coding-conventions">Coding conventions</a></li>
 <li><a href="#technology">About the technology</a></li>
-<li><a href="#limitations">Limitations</a></li>
+
 </ul>
 <h2 id="developing-and-editing">Developing and editing</h2>
 <h3 id="application-structure">Application structure</h3>
@@ -67,6 +68,7 @@ Grab the files -<br />
 <p>click the <b>build.bat</b> file in the root directory</p>
 <p>This will grab all the generated <span class="caps">HTML</span> code from your local server,<br />
 and write it to the static folder.</p>
+
 <h2 id="exporting">Exporting a stand alone version of the sites</h2>
 <h3>Mac <span class="caps">OSX</span></h3>
 Grab the files -<br />
@@ -76,16 +78,23 @@ Grab the files -<br />
 <p>click the <b>export.bat</b> file in the root directory</p>
 <p>This will grab all the assets, and all the <span class="caps">HTML</span>, and copy it to a file called site_0000, one directory up from<br />
 the root</p>
+
+<h2 id="testing">Testing</h2>
+<p>There is now a very simple test suite that uses Rspec, in the test directory</p>
+<p>Add whatever strings you want to search for in the <code>stringsToSearchFor</code> array inside <code>test/suite.rb</code>, and run <code>rake run_tests</code> from that directory</p>
+<p>A report will then be generated that you can open manually in your browser (<code>results.html</code>)</p>
+
 <h2 id="template-version">Template version</h2>
+
 <p>You can now find the code snippets needed to construct most of the elements of the site at this location:<br />
 <a href="http://localhost:4567/templates/index.html">http://localhost:4567/templates/index.html</a></p>
 <h2 id="modifying-the-css">Modifying the <span class="caps">CSS</span></h2>
+
 <p>The <span class="caps">CSS</span> has been written in a meta-language called <a href="http://sass-lang.com/">Sass</a>. You can go right ahead and edit the<br />
 Sass files inside <code>views/sass/core.sass</code> and these will appear at <a href="http://localhost:4567/">http://localhost:4567/</a>.</p>
+
 <p>Every time localhost is refreshed, a new generated <span class="caps">CSS</span> file is written to public/stylesheets/*.css</p>
-<h2 id="coding-conventions">Coding Conventions</h2>
-<h3 id="indentation">Indentation</h3>
-<p>Two spaces are used for indentation (no tab characters)</p>
+
 <h2 id="technology">About the technology</h2>
 <p>Built using the ruby "micro-framework" <a href="http://sinatrarb.com/intro">Sinatra</a></p>
 <h3 id="why-not-html">Why not code the whole lot in <span class="caps">HTML</span>?</h3>
@@ -114,11 +123,7 @@ the project has a longer lifespan, Sinatra is more suited to this as it is more 
 <h3 id="technical-diffs">Technical differences to Staticmatic</h3>
 <ul>
 <li>You need to set up your own routes</li>
-<li>It doesn't come with its own build script</li>
+<li>The site (outputted html files) folder is created one directory up from the route</li>
 </ul>
-<h3 id="limitations">Current limitations</h3>
-<ul>
-<li>In the main primary navigation used on the main content pages (i.e. not a home-page),<br />
-a primary navigation item can not link to a tertiary page, only secondary.</li>
-</ul>
+
 
